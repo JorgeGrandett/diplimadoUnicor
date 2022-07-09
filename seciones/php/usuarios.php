@@ -23,7 +23,7 @@
                 }
             }
             else {
-                $this->DB = getObj(4);
+                $this->DB = getObj(5);
             }
         }
 
@@ -90,7 +90,13 @@
             $this->changeDBUser(true);
             date_default_timezone_set('UTC');
             $auxres = $this->DB->actualizarMembresia($datos["monto"], date('Y-m-d'), $datos["nombre"], $datos["apellido"], $datos["medioPago"], "Pagado", $datos["cedula"], $datos["direccion"], $_SESSION['usuario'][1], $_SESSION['usuario'][2]);
-            print ("<script>location.href = './cerrarsesion.php';alert('".$auxres."');</script>");
+            if($auxres == true) {
+                print ("<script>location.href = './cerrarsesion.php';alert('Membresia actualizada con exito');</script>");
+            }
+            else {
+                print ("<script>location.href = '../views/mejorarSuscripcion.php';alert('Error al tratar de actualizar su membresia');</script>");
+            }
+            
         }
 
     }

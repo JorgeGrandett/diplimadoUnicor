@@ -127,17 +127,23 @@ class dataBase {
         try {
             $mysqli->begin_transaction();
 
-            $mysqli->query("UPDATE `clientes` SET `membresia`='".($menbresiaA+1)."' WHERE id=".$idUser.";");
-            $mysqli->query("INSERT INTO `factura`(`monto`, `fechaCompra`, `nombre`, `apellido`, `medioPago`, `confimacionPago`, `cedula`, `direccion`) VALUES ('".$monto."', '".$fechaCompra."', '".$nombres."', '".$apellidos."', '".$medioPago."', '".$confimacionPago."', '".$cedula."', '".$direccion."');");
+            $resUC = $mysqli->query("UPDATE `clientes` SET `membresia`='".($menbresiaA+1)."' WHERE id=".$idUser.";");
+            $resIF = $mysqli->query("INSERT INTO `factura`(`monto`, `fechaCompra`, `nombre`, `apellido`, `medioPago`, `confimacionPago`, `cedula`, `direccion`) VALUES ('".$monto."', '".$fechaCompra."', '".$nombres."', '".$apellidos."', '".$medioPago."', '".$confimacionPago."', '".$cedula."', '".$direccion."');");
             $auxId = $mysqli->insert_id;
-            $mysqli->query("INSERT INTO `suscripciones`(`idCliente`, `idFactura`, `fechaCompra`) VALUES ('".$idUser."','".$auxId."','".$fechaCompra."');");
+            $resIS = $mysqli->query("INSERT INTO `suscripciones`(`idCliente`, `idFactura`, `fechaCompra`) VALUES ('".$idUser."','".$auxId."','".$fechaCompra."');");
 
-            $mysqli->commit();
+            if($resUC && $resIF && $resIS) {
+                $mysqli->commit();
+                return true;
+            }
+            else {
+                throw new Exception("Error Processing Request", 1);
+            }
+            
         } catch (Exception $e) {
             $mysqli->rollback();
             return false;
-        }
-        return true;
+        } 
     }
 }
 
