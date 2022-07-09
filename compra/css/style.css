@@ -1,0 +1,93 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(300deg, #8EC5FC -50%, #E0C3FC 150%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+
+table {
+    border: ridge;
+    padding: 0.2em;
+}
+
+div h2 {
+    font-size: 2.2em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+    cursor: default;
+}
+
+form div h2 {
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 700;
+}
+
+th {
+    font-size: 1.2em;
+    cursor: default;
+}
+
+input[type="button"] {
+    width: 2em;
+    font-size: 0.95em;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #4159d063;
+    background-image: linear-gradient(90deg, #7583ca79 -50%, #ca66c49a 46%);
+    border: 0px;
+}
+
+input[type="button"]:hover {
+    background-color: #4159d063;
+    background-image: linear-gradient(0deg, #7583ca79 -50%, #ca66c49a 46%);
+    border: 2px solid rgb(54, 90, 85);
+}
+
+input[type="text"] {
+    margin: 0%;
+    padding: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    text-align: center;
+    border: 0px;
+    width: 12em;
+    font-size: 1em;
+    cursor: default;
+}
+
+table {
+    margin-bottom: 1em;
+    cursor: default;
+}
+
+.subir {
+    display: flex;
+    justify-content: center;
+}
+
+.subir input {
+    font-size: 1em;
+    width: 7em;
+    height: 2em;
+    border-radius: 7px;
+    border: 0px;
+    cursor: pointer;
+    background-color: #4159d063;
+    background-image: linear-gradient(90deg, #7583ca79 -50%, #ca66c49a 46%);
+    font-weight: 700;
+}
+
+.subir input:hover {
+    border: 3px solid rgb(54, 90, 85);
+    background-color: #4159d063;
+    background-image: linear-gradient(0, #4159d079 -50%, #c850c077 46%);
+}
+

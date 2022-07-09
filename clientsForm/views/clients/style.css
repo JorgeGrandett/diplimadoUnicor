@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(300deg, #8EC5FC -50%, #E0C3FC 150%);
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+}
+
+table, th, td {
+    border: 1px solid #5353536e;
+}
+
+table {
+    background-color: white;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #cfd4d8b7;
+    padding: 0.2em;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div>
+        <h2>Registro de Clientes</h2>
+    </div>
+    <form action="controller.php" method="post">
+        <div>
+            <input type="text" name="nombre" id="nombre" maxlength="100" placeholder="Nombre completo" required>
+        </div>
+        <div>
+            <input type="number" name="cedula" id="cedula" placeholder="Numero de cedula" maxlength="10" oninput="maxiLength(this)" required>
+        </div>
+        <div>
+            <input type="text" name="direccion" id="direccion" placeholder="Direccion de residencia" maxlength="50" required>
+        </div>
+        <div>
+            <input type="number" name="telefono" id="telefono" placeholder="Numero de telefono" maxlength="10" oninput="maxiLength(this)" required>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" placeholder="Contraseña" maxlength="50" required>
+        </div>
+        <div class="botondiv">
+            <input type="submit" value="Registar">
+        </div>
+    </form>
+
+    <a href="./views/clients/clients.php">Ver clientes</a>
+
+    <script type="text/javascript" src="logica.js"></script>
+</body>
+</html>

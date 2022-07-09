@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="accion.php" method="post">
+        <h3>Formulario basico</h3>
+        <div>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="" required>
+        </div>
+        <div>
+            <label for="nacimiento">Ingrese su fecha de nacimiento:</label>
+            <input type="date" name="nacimiento" id="nacimiento" required>
+        </div>
+        <div>
+            <label for="sexo">Seleccione su sexo:</label>
+            <div id="sexo" style="display: flex; flex-direction: column;">
+                <div>
+                    <label for="sexmas">Masculino:</label>
+                    <input type="radio" name="sexo" id="sexmas" value="Masculino" checked>
+                </div>
+                <div>
+                    <label for="sexfem">Femenino:</label>
+                    <input type="radio" name="sexo" id="sexfem" value="Femenino">
+                </div>
+                <div>
+                    <label for="sexotro">Otro:</label>
+                    <input type="radio" name="sexo" id="sexotro" value="Otro">
+                </div>  
+            </div> 
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

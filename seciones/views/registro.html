@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>REGISTRO</title>
+</head>
+<body>
+    <div>
+        <h2>Registro de Usuarios</h2>
+    </div>
+    <form action="../php/usuarios.php" method="post">
+        <div>
+            <input type="text" name="nombres" id="nombres" required placeholder="Nombres">
+        </div>
+        <div>
+            <input type="text" name="apellidos" id="apellidos" required placeholder="Apellidos">
+        </div>
+        <div>
+            <input type="number" name="cedula" id="cedula" maxlength="10" oninput="maxiLength(this)" required placeholder="Numero de cedula">
+        </div>
+        <div>
+            <input type="email" name="correo" id="correo" required placeholder="Correo electronico">
+        </div>
+         <div>
+            <label for="nacimiento">Fecha de nacimiento:</label>
+            <input type="date" name="nacimiento" id="nacimiento" required>
+         </div>
+         <div>
+            <input type="number" name="telefono" id="telefono" maxlength="10" oninput="maxiLength(this)" required placeholder="Numero de telefono">
+         </div>
+         <div>
+            <input type="text" name="usuario" id="usuario" required placeholder="Usuario">
+         </div>
+         <div>
+            <input type="password" name="contraseña" id="contraseña" required placeholder="Contraseña">
+         </div>
+         <div class="botondiv">
+            <input type="submit" name="registrar" value="Registrarme">
+         </div>
+    </form>
+    <div class="redi">
+        <p>¿Ya tienes una cuenta creada?</p><p><a href="./iniciosecion.html">Inicia secion</a> para acceder a todo el contenido que tenemos para ti.</p>
+    </div>
+
+    <script src="../js/logic.js"></script>
+
+</body>
+</html>
