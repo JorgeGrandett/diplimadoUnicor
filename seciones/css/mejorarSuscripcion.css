@@ -1,3 +1,128 @@
+body {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(248deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div h2 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+}
+
+form {
+    margin-top: 1em;
+    width: 90%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 7px;
+    border: 1px solid #8EC5FC;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+form div{
+    margin: 0.5em;
+    padding: 0.7em;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #0c0c0c83;
+}
+
+
+form input {
+    width: 95%;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 5px;
+    border: #a09d9d1f;
+}
+
+form input[type="submit"] {
+    width: 70%;
+    height: 2.5em;
+    border-radius: 0.5em;
+    border: #ffffff00;
+    color: white;
+    background-color: #4158D0;
+    background-image: linear-gradient(90deg, #4158D0 -50%, #C850C0 46%);
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.botondiv {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border:#ffffffcc;
+}
+
+.botondiv input:hover {
+    border: 3px solid #474747;
+}
+
+.redi {
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.redi a {
+    color: blue;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.redi a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.397);
+    text-decoration: underline;
+}
+
+.divMetodos, .divMetodos div {
+    border: 0px;
+    display: flex;
+}
+
+.divMetodos {
+    flex-direction: column;
+}
+
+.divMetodos label {
+    text-align: center;
+}
+
+.divdivMetodos {
+    display: flex;
+}
+
+.divdivMetodos div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.divdivMetodos div input {
+    height: 1em;
+}
+
+.contCheck {
+    display: flex;
+    justify-content: space-around;
+    border: 0px;
+    border-bottom: 0px;
+}
+
+.contCheck input {
+    width: 20%;
+}
+
+
 img {
-    width: 7vw;
+    width: 5vw;
 }
